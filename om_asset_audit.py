@@ -140,6 +140,7 @@ def audit():
             "scale_applied": scale_applied(obj),
             "name_ok": NAME_PATTERN is None or re.match(NAME_PATTERN, obj.name) is not None,
             "materials": material_problems(obj),
+            "data_name": obj.data.name
         })
 
     # texel density target: fixed value, or the median of everything measured
@@ -158,6 +159,8 @@ def audit():
             issues.append(f"{r['ngons']} ngons")
         if r["materials"]:
             issues.append(r["materials"])
+        if r["name"] != r["data_name"]:
+            issues.append(f"mesh data named {r['data_name']}")
         d = r["texel_px_per_m"]
         if target and d and abs(d - target) / target > TEXEL_TOLERANCE:
             issues.append(f"texel density {d / target:.0%} of target")
