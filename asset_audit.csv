@@ -1,0 +1,42 @@
+name,tris,ngons,has_uv,texel_px_per_m,scale_applied,name_ok,materials,issues
+Actuator_L,60,2,True,1655.6730832097262,True,True,,2 ngons; texel density 125% of target
+Actuator_R,60,2,True,1655.6731338314742,True,True,,2 ngons; texel density 125% of target
+Axle,60,2,True,1243.5611937836893,True,True,,2 ngons
+AxleCap_L,188,2,True,1243.5613824308907,True,True,,2 ngons
+AxleCap_R,188,2,True,1243.5612073839575,True,True,,2 ngons
+Bolt_Hub,200,20,True,1243.5608791277218,True,True,,20 ngons
+Bolt_Hub_R,200,20,True,1243.5609554374405,True,True,,20 ngons
+Bolts_Gland,160,16,True,1326.0183353808702,True,True,,16 ngons
+Bolts_TorqueLink,984,12,True,2045.9173414417162,True,True,,12 ngons; texel density 154% of target
+Collar_Ear_L,108,0,True,2116.1717191160697,True,True,,texel density 160% of target
+Collar_Ear_R,108,0,True,2116.171607908268,True,True,,texel density 160% of target
+Drag_Stay,60,2,True,1646.2460374076675,True,True,,2 ngons; texel density 124% of target
+HubCap_L,284,2,True,1243.5616521482955,True,True,,2 ngons
+HubCap_R,284,2,True,1243.561911857806,True,True,,2 ngons
+Light_Housing,12,0,True,2124.402406848989,True,True,,texel density 160% of target
+Lock_Stay,60,2,True,1648.0149422644768,True,True,,2 ngons; texel density 124% of target
+Lug_Axle,284,2,True,2030.8430111510772,True,True,,2 ngons; texel density 153% of target
+Lug_Collar,284,2,True,2030.8425107582275,True,True,,2 ngons; texel density 153% of target
+Lug_DragStay,108,0,True,2110.253117774909,True,True,,texel density 159% of target
+Lug_LockStay,108,0,True,2107.5032543631214,True,True,,texel density 159% of target
+Lug_Mid,284,2,True,2030.843391749338,True,True,,2 ngons; texel density 153% of target
+Oleo_Gland,380,2,True,1326.0192161254095,True,True,,2 ngons
+Piston_L,188,2,True,1647.7867198421975,True,True,,2 ngons; texel density 124% of target
+Piston_R,188,2,True,1647.7868569947518,True,True,,2 ngons; texel density 124% of target
+Rim_L,532,8,True,1243.5613948924765,True,True,,8 ngons
+Rim_R,532,8,True,1243.5613510545372,True,True,,8 ngons
+Steering_Collar,124,2,True,1685.4536248735594,True,True,,2 ngons; texel density 127% of target
+Strut_Oleo,124,2,True,1326.0188916350403,True,True,,2 ngons
+Strut_Outer,124,2,True,1326.0188880300916,True,True,,2 ngons
+Tire_L,512,0,True,1962.0109603058036,True,True,,texel density 148% of target
+Tire_R,512,0,True,1962.010963659892,True,True,,texel density 148% of target
+TorqueLink_Lower,220,0,True,2081.437484212037,True,True,,texel density 157% of target
+TorqueLink_Upper,476,30,True,2102.221395114073,True,True,,30 ngons; texel density 159% of target
+TowLug_L,108,0,True,1243.5642246576738,True,True,,
+TowLug_R,108,0,True,1243.564620666992,True,True,,
+Trunnion_Arm_L,108,0,True,1326.0199713422614,True,True,,
+Trunnion_Arm_R,108,0,True,1326.0199704160366,True,True,,
+Trunnion_Boss,284,2,True,1326.0192379548814,True,True,,2 ngons
+Trunnion_Shaft,380,2,True,1326.0192123957527,True,True,,2 ngons
+ValveStem_L,204,2,True,1243.5663264762159,True,True,,2 ngons
+ValveStem_R,204,2,True,1243.5667755031,True,True,,2 ngons

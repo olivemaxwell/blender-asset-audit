@@ -1,0 +1,376 @@
+00:42.766  blend            | Read blend: "C:\Users\Shadow\OneDrive\Desktop\Portfolio_levels\A320_Landing_Nose_Gear\A320_NoseGear_export_v001.blend"
+
+==============================================================================
+ASSET AUDIT  |  41 meshes  |  texture 2048px  |  texel target 13.26 px/cm
+==============================================================================
+object                                tris   px/cm  issues
+Actuator_L                              60   16.56  2 ngons; texel density 125% of target
+Actuator_R                              60   16.56  2 ngons; texel density 125% of target
+Axle                                    60   12.44  2 ngons
+AxleCap_L                              188   12.44  2 ngons
+AxleCap_R                              188   12.44  2 ngons
+Bolt_Hub                               200   12.44  20 ngons
+Bolt_Hub_R                             200   12.44  20 ngons
+Bolts_Gland                            160   13.26  16 ngons
+Bolts_TorqueLink                       984   20.46  12 ngons; texel density 154% of target
+Collar_Ear_L                           108   21.16  texel density 160% of target
+Collar_Ear_R                           108   21.16  texel density 160% of target
+Drag_Stay                               60   16.46  2 ngons; texel density 124% of target
+HubCap_L                               284   12.44  2 ngons
+HubCap_R                               284   12.44  2 ngons
+Light_Housing                           12   21.24  texel density 160% of target
+Lock_Stay                               60   16.48  2 ngons; texel density 124% of target
+Lug_Axle                               284   20.31  2 ngons; texel density 153% of target
+Lug_Collar                             284   20.31  2 ngons; texel density 153% of target
+Lug_DragStay                           108   21.10  texel density 159% of target
+Lug_LockStay                           108   21.08  texel density 159% of target
+Lug_Mid                                284   20.31  2 ngons; texel density 153% of target
+Oleo_Gland                             380   13.26  2 ngons
+Piston_L                               188   16.48  2 ngons; texel density 124% of target
+Piston_R                               188   16.48  2 ngons; texel density 124% of target
+Rim_L                                  532   12.44  8 ngons
+Rim_R                                  532   12.44  8 ngons
+Steering_Collar                        124   16.85  2 ngons; texel density 127% of target
+Strut_Oleo                             124   13.26  2 ngons
+Strut_Outer                            124   13.26  2 ngons
+Tire_L                                 512   19.62  texel density 148% of target
+Tire_R                                 512   19.62  texel density 148% of target
+TorqueLink_Lower                       220   20.81  texel density 157% of target
+TorqueLink_Upper                       476   21.02  30 ngons; texel density 159% of target
+TowLug_L                               108   12.44  ok
+TowLug_R                               108   12.44  ok
+Trunnion_Arm_L                         108   13.26  ok
+Trunnion_Arm_R                         108   13.26  ok
+Trunnion_Boss                          284   13.26  2 ngons
+Trunnion_Shaft                         380   13.26  2 ngons
+ValveStem_L                            204   12.44  2 ngons
+ValveStem_R                            204   12.44  2 ngons
+------------------------------------------------------------------------------
+total triangles 9,500   |   37 of 41 meshes need attention
+report written to C:\Users\Shadow\OneDrive\Desktop\Portfolio_levels\A320_Landing_Nose_Gear\asset_audit.csv
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Actuator_L.fbx'
+export finished in 0.0187 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Actuator_R.fbx'
+export finished in 0.0062 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Axle.fbx'
+export finished in 0.0065 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\AxleCap_L.fbx'
+export finished in 0.0063 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\AxleCap_R.fbx'
+export finished in 0.0071 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Bolt_Hub.fbx'
+export finished in 0.0060 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Bolt_Hub_R.fbx'
+export finished in 0.0064 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Bolts_Gland.fbx'
+export finished in 0.0069 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Bolts_TorqueLink.fbx'
+export finished in 0.0076 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Collar_Ear_L.fbx'
+export finished in 0.0071 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Collar_Ear_R.fbx'
+export finished in 0.0073 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Drag_Stay.fbx'
+export finished in 0.0061 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\HubCap_L.fbx'
+export finished in 0.0056 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\HubCap_R.fbx'
+export finished in 0.0056 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Light_Housing.fbx'
+export finished in 0.0057 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Lock_Stay.fbx'
+export finished in 0.0055 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Lug_Axle.fbx'
+export finished in 0.0059 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Lug_Collar.fbx'
+export finished in 0.0047 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Lug_DragStay.fbx'
+export finished in 0.0056 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Lug_LockStay.fbx'
+export finished in 0.0066 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Lug_Mid.fbx'
+export finished in 0.0062 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Oleo_Gland.fbx'
+export finished in 0.0058 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Piston_L.fbx'
+export finished in 0.0063 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Piston_R.fbx'
+export finished in 0.0061 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Rim_L.fbx'
+export finished in 0.0062 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Rim_R.fbx'
+export finished in 0.0081 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Steering_Collar.fbx'
+export finished in 0.0071 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Strut_Oleo.fbx'
+export finished in 0.0063 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Strut_Outer.fbx'
+export finished in 0.0064 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Tire_L.fbx'
+export finished in 0.0055 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Tire_R.fbx'
+export finished in 0.0060 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\TorqueLink_Lower.fbx'
+export finished in 0.0055 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\TorqueLink_Upper.fbx'
+export finished in 0.0076 sec.
+Warning: Mesh 'Cube.011' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\TowLug_L.fbx'
+export finished in 0.0056 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\TowLug_R.fbx'
+export finished in 0.0049 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Trunnion_Arm_L.fbx'
+export finished in 0.0055 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Trunnion_Arm_R.fbx'
+export finished in 0.0059 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Trunnion_Boss.fbx'
+export finished in 0.0054 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Trunnion_Shaft.fbx'
+export finished in 0.0055 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\ValveStem_L.fbx'
+export finished in 0.0059 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\ValveStem_R.fbx'
+export finished in 0.0058 sec.
+Warning: Mesh 'Cylinder.004' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+exported 41 FBX files, settings recorded in export_record.json
+
+==============================================================================
+ASSET AUDIT  |  41 meshes  |  texture 2048px  |  texel target 13.26 px/cm
+==============================================================================
+object                                tris   px/cm  issues
+Actuator_L                              60   16.56  2 ngons; texel density 125% of target
+Actuator_R                              60   16.56  2 ngons; texel density 125% of target
+Axle                                    60   12.44  2 ngons
+AxleCap_L                              188   12.44  2 ngons
+AxleCap_R                              188   12.44  2 ngons
+Bolt_Hub                               200   12.44  20 ngons
+Bolt_Hub_R                             200   12.44  20 ngons
+Bolts_Gland                            160   13.26  16 ngons
+Bolts_TorqueLink                       984   20.46  12 ngons; texel density 154% of target
+Collar_Ear_L                           108   21.16  texel density 160% of target
+Collar_Ear_R                           108   21.16  texel density 160% of target
+Drag_Stay                               60   16.46  2 ngons; texel density 124% of target
+HubCap_L                               284   12.44  2 ngons
+HubCap_R                               284   12.44  2 ngons
+Light_Housing                           12   21.24  texel density 160% of target
+Lock_Stay                               60   16.48  2 ngons; texel density 124% of target
+Lug_Axle                               284   20.31  2 ngons; texel density 153% of target
+Lug_Collar                             284   20.31  2 ngons; texel density 153% of target
+Lug_DragStay                           108   21.10  texel density 159% of target
+Lug_LockStay                           108   21.08  texel density 159% of target
+Lug_Mid                                284   20.31  2 ngons; texel density 153% of target
+Oleo_Gland                             380   13.26  2 ngons
+Piston_L                               188   16.48  2 ngons; texel density 124% of target
+Piston_R                               188   16.48  2 ngons; texel density 124% of target
+Rim_L                                  532   12.44  8 ngons
+Rim_R                                  532   12.44  8 ngons
+Steering_Collar                        124   16.85  2 ngons; texel density 127% of target
+Strut_Oleo                             124   13.26  2 ngons
+Strut_Outer                            124   13.26  2 ngons
+Tire_L                                 512   19.62  texel density 148% of target
+Tire_R                                 512   19.62  texel density 148% of target
+TorqueLink_Lower                       220   20.81  texel density 157% of target
+TorqueLink_Upper                       476   21.02  30 ngons; texel density 159% of target
+TowLug_L                               108   12.44  ok
+TowLug_R                               108   12.44  ok
+Trunnion_Arm_L                         108   13.26  ok
+Trunnion_Arm_R                         108   13.26  ok
+Trunnion_Boss                          284   13.26  2 ngons
+Trunnion_Shaft                         380   13.26  2 ngons
+ValveStem_L                            204   12.44  2 ngons
+ValveStem_R                            204   12.44  2 ngons
+------------------------------------------------------------------------------
+total triangles 9,500   |   37 of 41 meshes need attention
+report written to C:\Users\Shadow\OneDrive\Desktop\Portfolio_levels\A320_Landing_Nose_Gear\asset_audit.csv
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Actuator_L.fbx'
+export finished in 0.0063 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Actuator_R.fbx'
+export finished in 0.0055 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Axle.fbx'
+export finished in 0.0062 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\AxleCap_L.fbx'
+export finished in 0.0068 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\AxleCap_R.fbx'
+export finished in 0.0059 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Bolt_Hub.fbx'
+export finished in 0.0068 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Bolt_Hub_R.fbx'
+export finished in 0.0072 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Bolts_Gland.fbx'
+export finished in 0.0066 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Bolts_TorqueLink.fbx'
+export finished in 0.0099 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Collar_Ear_L.fbx'
+export finished in 0.0075 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Collar_Ear_R.fbx'
+export finished in 0.0061 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Drag_Stay.fbx'
+export finished in 0.0072 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\HubCap_L.fbx'
+export finished in 0.0073 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\HubCap_R.fbx'
+export finished in 0.0072 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Light_Housing.fbx'
+export finished in 0.0062 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Lock_Stay.fbx'
+export finished in 0.0067 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Lug_Axle.fbx'
+export finished in 0.0079 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Lug_Collar.fbx'
+export finished in 0.0071 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Lug_DragStay.fbx'
+export finished in 0.0073 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Lug_LockStay.fbx'
+export finished in 0.0068 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Lug_Mid.fbx'
+export finished in 0.0067 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Oleo_Gland.fbx'
+export finished in 0.0071 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Piston_L.fbx'
+export finished in 0.0066 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Piston_R.fbx'
+export finished in 0.0064 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Rim_L.fbx'
+export finished in 0.0077 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Rim_R.fbx'
+export finished in 0.0093 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Steering_Collar.fbx'
+export finished in 0.0069 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Strut_Oleo.fbx'
+export finished in 0.0067 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Strut_Outer.fbx'
+export finished in 0.0073 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Tire_L.fbx'
+export finished in 0.0086 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Tire_R.fbx'
+export finished in 0.0086 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\TorqueLink_Lower.fbx'
+export finished in 0.0081 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\TorqueLink_Upper.fbx'
+export finished in 0.0076 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\TowLug_L.fbx'
+export finished in 0.0065 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\TowLug_R.fbx'
+export finished in 0.0072 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Trunnion_Arm_L.fbx'
+export finished in 0.0062 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Trunnion_Arm_R.fbx'
+export finished in 0.0067 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Trunnion_Boss.fbx'
+export finished in 0.0090 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\Trunnion_Shaft.fbx'
+export finished in 0.0081 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\ValveStem_L.fbx'
+export finished in 0.0068 sec.
+
+FBX export starting... 'C:\\Users\\Shadow\\OneDrive\\Desktop\\Portfolio_levels\\A320_Landing_Nose_Gear\\export\\ValveStem_R.fbx'
+export finished in 0.0075 sec.
+exported 41 FBX files, settings recorded in export_record.json
