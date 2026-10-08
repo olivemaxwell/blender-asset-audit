@@ -33,16 +33,28 @@ import math
 import os
 import re
 from collections import defaultdict
+from mathutils import Vector
 
 # ---------------------------------------------------------------- SETTINGS
 TEXTURE_RES = 2048              # texture size the UVs are laid out for (px)
 TARGET_TEXEL_DENSITY = None     # px per metre; None = use the median of all meshes as target
 TEXEL_TOLERANCE = 0.20          # flag anything more than 20% off target
-NAME_PATTERN = None             # e.g. r"^SM_[A-Za-z0-9_]+$" to enforce an SM_ prefix; None = skip the check
+NAME_PATTERN = r"^SM_BaggageCart_[A-Za-z_]+$"             # e.g. r"^SM_[A-Za-z0-9_]+$" to enforce an SM_ prefix; None = skip the check
 LOD_PATTERN = r"^(?P<base>.+)_LOD(?P<lod>\d+)$"
-ONLY_SELECTED = False           # True = audit selected objects only
+ONLY_SELECTED = True           # True = audit selected objects only
 EXPORT_FBX = False              # True = also export each passing mesh to FBX
 EXPORT_FOLDER = "//export"      # // means "relative to the .blend file"
+
+# Vehicle readiness check
+WHEEL_PATTERN = "Wheel_"
+FRONT_AXLE_PATTERN = "FrontAxle"
+FRONT_AXLE_CHILDREN = ("Wheel_FL", "Wheel_FR", "Drawbar")
+WHEEL_DIAMETER_CM = 46.0
+DIAMETER_TOLERANCE_CM = 1.0
+PIVOT_TOLERANCE_CM = 0.1
+TRI_SHARE_WARN = 0.25
+MATCH_TOLERANCE_CM = 0.1
+PAIR_SWAP = {"_FL": "_FR", "_FR": "_FL", "_RL": "_RR", "_RR": "_RL"}
 
 FBX_SETTINGS = {                # recorded verbatim in export_record.json
     "use_selection": True,
@@ -81,6 +93,8 @@ def measure(obj, depsgraph):
 
     uv_layer = bm.loops.layers.uv.active
     world_area = sum(f.calc_area() for f in bm.faces)
+    scale = bpy.context.scene.unit_settings.scale_length
+    world_area *= scale ** 2   # Blender units to square metres
     uv_area = 0.0
     if uv_layer:
         for f in bm.faces:
@@ -111,6 +125,8 @@ def measure(obj, depsgraph):
 def scale_applied(obj):
     return all(abs(s - 1.0) < 1e-4 for s in obj.scale)
 
+def rotation_applied(obj):
+    return all(abs(a) < 1e-4 for a in obj.rotation_euler)
 
 def material_problems(obj):
     if not obj.material_slots:
@@ -119,6 +135,41 @@ def material_problems(obj):
         return "empty material slot"
     return ""
 
+# ---------------------------------------------------------------- VEHICLE CHECKS
+def is_wheel(obj):
+    return WHEEL_PATTERN in obj.name
+
+
+def wheel_pivot_offset_cm(obj):
+    """How far the origin sits from the centre of the wheel's own geometry."""
+    corners = [Vector(c) for c in obj.bound_box]
+    centre = sum(corners, Vector()) / 8
+    return centre.length * bpy.context.scene.unit_settings.scale_length * 100
+
+def wheel_spin_axis(obj):
+    """The axle runs along the wheel's thinnest dimension."""
+    d = obj.dimensions
+    return "XYZ"[min(range(3), key=lambda i: d[i])]
+
+def wheel_diameter_cm(obj):
+    """A wheel's largest dimension is its diameter."""
+    return max(obj.dimensions) * bpy.context.scene.unit_settings.scale_length * 100
+
+def wheel_world_cm(obj):
+    """World height, and distance from the centreline, of the wheel's pivot."""
+    s = bpy.context.scene.unit_settings.scale_length * 100
+    p = obj.matrix_world.translation
+    return p.z * s, abs(p.x) * s
+
+def hierarchy_problem(obj):
+    """Front wheels and drawbar steer with FrontAxle; every other part hangs under the root."""
+    parent = obj.parent
+    if any(child in obj.name for child in FRONT_AXLE_CHILDREN):
+        if parent is None or FRONT_AXLE_PATTERN not in parent.name:
+            return f"should be parented to {FRONT_AXLE_PATTERN}"
+    elif parent is None or parent.type != "EMPTY":
+        return "should be parented to the root empty"
+    return ""
 
 def audit():
     depsgraph = bpy.context.evaluated_depsgraph_get()
@@ -127,10 +178,12 @@ def audit():
     if not meshes:
         print("No mesh objects to audit.")
         return [], {}
+    is_vehicle = any(FRONT_AXLE_PATTERN in o.name for o in meshes)
 
     rows = []
     for obj in sorted(meshes, key=lambda o: o.name):
         m = measure(obj, depsgraph)
+        height, track = wheel_world_cm(obj) if is_wheel(obj) else (None, None)
         rows.append({
             "name": obj.name,
             "tris": m["tris"],
@@ -140,17 +193,31 @@ def audit():
             "scale_applied": scale_applied(obj),
             "name_ok": NAME_PATTERN is None or re.match(NAME_PATTERN, obj.name) is not None,
             "materials": material_problems(obj),
-            "data_name": obj.data.name
+            "data_name": obj.data.name,
+            "pivot_offset_cm": wheel_pivot_offset_cm(obj) if is_wheel(obj) else None,
+            "spin_axis": wheel_spin_axis(obj) if is_wheel(obj) else None,
+            "hierarchy": hierarchy_problem(obj) if is_vehicle else "",
+            "rotation_applied": rotation_applied(obj) if is_vehicle else True,
+            "diameter_cm": wheel_diameter_cm(obj) if is_wheel(obj) else None,
+            "height_cm": height,
+            "track_cm": track,
         })
 
     # texel density target: fixed value, or the median of everything measured
     densities = sorted(r["texel_px_per_m"] for r in rows if r["texel_px_per_m"])
     target = TARGET_TEXEL_DENSITY or (densities[len(densities) // 2] if densities else None)
+     # the axis most wheels spin on; any wheel that differs is the odd one out
+    wheel_axes = [r["spin_axis"] for r in rows if r["spin_axis"]]
+    common_axis = max(set(wheel_axes), key=wheel_axes.count) if wheel_axes else None
+    total_tris = sum(r["tris"] for r in rows)
+    rows_by_name = {r["name"]: r for r in rows}
 
     for r in rows:
         issues = []
         if not r["scale_applied"]:
             issues.append("scale not applied")
+        if not r["rotation_applied"]:
+            issues.append("rotation not applied")
         if not r["has_uv"]:
             issues.append("no UV map")
         if not r["name_ok"]:
@@ -159,12 +226,38 @@ def audit():
             issues.append(f"{r['ngons']} ngons")
         if r["materials"]:
             issues.append(r["materials"])
+        off = r["pivot_offset_cm"]
+        if off is not None and off > PIVOT_TOLERANCE_CM:
+            issues.append(f"wheel pivot {off:.2f} cm off centre")
+        if r["spin_axis"] and r["spin_axis"] != common_axis:
+            issues.append(f"spin axis {r['spin_axis']}, other wheels spin on {common_axis}")
+        if r["hierarchy"]:
+            issues.append(r["hierarchy"])
+        dia = r["diameter_cm"]
+        if dia is not None and abs(dia - WHEEL_DIAMETER_CM) > DIAMETER_TOLERANCE_CM:
+            issues.append(f"wheel {dia:.1f} cm across, real tyre is {WHEEL_DIAMETER_CM:.0f} cm")
+        share = r["tris"] / total_tris if total_tris else 0
+        r["tri_share"] = round(share, 3)
+        if len(rows) > 1 and share > TRI_SHARE_WARN:
+            issues.append(f"{share:.0%} of the asset's triangles")
+        if r["diameter_cm"] is not None:
+            for side, other in PAIR_SWAP.items():
+                if side in r["name"]:
+                    partner = rows_by_name.get(r["name"].replace(side, other))
+                    if partner:
+                        for label, key in (("diameter", "diameter_cm"),
+                                           ("height", "height_cm"),
+                                           ("distance from centre", "track_cm")):
+                            a, b = r[key], partner[key]
+                            if abs(a - b) > MATCH_TOLERANCE_CM:
+                                issues.append(f"doesn't match {partner['name']}: {label} {a:.1f} vs {b:.1f} cm")
         if r["name"] != r["data_name"]:
             issues.append(f"mesh data named {r['data_name']}")
         d = r["texel_px_per_m"]
         if target and d and abs(d - target) / target > TEXEL_TOLERANCE:
             issues.append(f"texel density {d / target:.0%} of target")
         r["issues"] = "; ".join(issues)
+       
 
     # LOD chains: every LODn should have fewer triangles than LODn-1
     chains = defaultdict(dict)
@@ -236,7 +329,7 @@ def report(rows, extra):
 # Issues that must stop an export, as opposed to advisory ones such as ngons or a
 # texel density that differs from the median because it sits in a tighter set.
 BLOCKING = ("scale not applied", "no UV map", "no material", "empty material slot",
-            "LOD")
+            "LOD", "wheel pivot", "spin axis", "should be parented", "rotation not applied", "doesn't match")
 
 
 def blocking_issues(issues):

@@ -1,0 +1,10 @@
+name,tris,ngons,has_uv,texel_px_per_m,scale_applied,name_ok,materials,data_name,pivot_offset_cm,spin_axis,hierarchy,rotation_applied,diameter_cm,height_cm,track_cm,tri_share,issues
+SM_BaggageCart_Chassis,3104,34,True,329.75169532888106,True,True,,SM_BaggageCart_Chassis,,,,True,,,,0.195,34 ngons; texel density 24% of target
+SM_BaggageCart_Drawbar,4564,6,True,1266.499544850757,True,True,,SM_BaggageCart_Drawbar,,,,True,,,,0.287,6 ngons; 29% of the asset's triangles
+SM_BaggageCart_FrontAxle,716,2,True,1350.1905688397107,True,True,,SM_BaggageCart_FrontAxle,,,,True,,,,0.045,2 ngons
+SM_BaggageCart_SidePanel_L,1076,8,True,330.3296699375781,True,True,,SM_BaggageCart_SidePanel_L,,,,True,,,,0.068,8 ngons; texel density 24% of target
+SM_BaggageCart_SidePanel_R,1076,8,True,330.329455276055,True,True,,SM_BaggageCart_SidePanel_R,,,,True,,,,0.068,8 ngons; texel density 24% of target
+SM_BaggageCart_Wheel_FL,1336,4,True,2281.7818276576704,True,True,,SM_BaggageCart_Wheel_FL,1.1920928688624599e-07,X,,True,45.99999897181988,22.99999948590994,51.99999883770943,0.084,4 ngons; texel density 169% of target
+SM_BaggageCart_Wheel_FR,1336,4,True,2281.7818160283077,True,True,,SM_BaggageCart_Wheel_FR,1.1920928688624599e-07,X,,True,45.99999897181988,22.99999948590994,51.99999883770943,0.084,4 ngons; texel density 169% of target
+SM_BaggageCart_Wheel_RL,1336,4,True,2281.7818736233853,True,True,,SM_BaggageCart_Wheel_RL,1.1920928688624599e-07,X,,True,45.99999897181988,22.99999948590994,51.99999883770943,0.084,4 ngons; texel density 169% of target
+SM_BaggageCart_Wheel_RR,1336,4,True,2281.7818614476396,True,True,,SM_BaggageCart_Wheel_RR,1.1920928688624599e-07,X,,True,45.99999897181988,22.99999948590994,51.99999883770943,0.084,4 ngons; texel density 169% of target
